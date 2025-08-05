@@ -3,10 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Engineering Portfolio</title>
+    <title>Engineering Portfolio</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        h2 {
+            font-size: 2.5em;
+        }
+        hr {
+            border: 1px solid white;
+            width: 80%;
+            margin: 30px auto;
+            opacity: 0.5;
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .about img {
+            max-width: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .about img:hover {
+            transform: scale(1.05);
+        }
+        .about-text {
+            max-width: 500px;
+            text-align: left;
+        }
+        .about-text p {
+            font-size: 1.1em;
+            line-height: 1.5em;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.8em;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #00aaff;
+            transform: translateY(-3px);
+        }
+        .projects {
+            margin-top: 20px;
+        }
+        .projects a {
+            display: inline-block;
+            color: white;
+            font-size: 1.2em;
+            margin: 10px 20px;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .projects a:hover {
+            color: #00aaff;
+            border-color: #00aaff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                max-width: 90%;
+                text-align: center;
+            }
+            .about img {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .projects a {
+                font-size: 1em;
+                margin: 8px 12px;
+            }
+        }
+    </style>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to My Engineering Portfolio</h1>
-    <p>This site is under construction.</p>
+    <!-- Name Section -->
+    <div class="section">
+        <h1>Your Name</h1>
+        <hr>
+    </div>
+
+    <!-- About Section -->
+    <div class="section about">
+        <img src="your-photo.jpg" alt="Your Photo">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>This is a short bio about you. Describe your engineering background, interests, and key experiences here.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Projects Section -->
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <a href="#">Project 1</a>
+            <a href="#">Project 2</a>
+            <a href="#">Project 3</a>
+        </div>
+    </div>
+
+    <script>
+        // Intersection Observer to animate sections on scroll
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
+
