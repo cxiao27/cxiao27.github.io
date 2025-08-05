@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name - Charles Xiao</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            padding: 30px 20px 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        hr {
+            border: 1px solid white;
+            width: 80%;
+            margin: 20px auto 30px auto;
+            opacity: 0.5;
+        }
+
+        /* Home Button */
+        .home-button {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            text-decoration: underline;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .home-button:hover {
+            color: #00aaff;
+        }
+
+        /* Project Block (Image + Text) */
+        .project-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-block img {
+            width: 50%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .project-text {
+            width: 45%;
+            font-size: 1.1em;
+            line-height: 1.5em;
+            text-align: left;
+        }
+
+        /* Optional: alternate background shade for separation */
+        .alt-background {
+            background-color: #111;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 900px) {
+            .project-block {
+                flex-direction: column;
+                text-align: center;
+            }
+            .project-block img {
+                width: 80%;
+            }
+            .project-text {
+                width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <a href="index.html" class="home-button">Home</a>
+        <h1>Charles Xiao</h1>
+        <hr>
+    </div>
+
+    <!-- Project Blocks -->
+    <div class="project-block">
+        <img src="image1.jpg" alt="Project Image 1">
+        <div class="project-text">
+            <h2>Section 1 Title</h2>
+            <p>
+                This is the first block of your project. Describe what this part of the project is about.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-block alt-background">
+        <img src="image2.jpg" alt="Project Image 2">
+        <div class="project-text">
+            <h2>Section 2 Title</h2>
+            <p>
+                This is the second block. You can alternate background colors for visual separation if you want.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-block">
+        <img src="image3.jpg" alt="Project Image 3">
+        <div class="project-text">
+            <h2>Section 3 Title</h2>
+            <p>
+                Third block of the project. Keep stacking as many blocks as needed.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
