@@ -42,27 +42,31 @@
             margin: 30px auto 10px auto; /* reduce space below hr */
             opacity: 0.5;
         }
-        /* About Section */
+
+        /* === About Section === */
         .about {
-            display: center;
-            align-items: center;   /* Align items at the top */
-            justify-content: center;   /* Center the block horizontally */
-            flex-wrap: wrap;           /* Wrap on smaller screens */
-            gap: 30px;                 /* Space between image and text */
-            text-align: center;          /* Keep text left-aligned */
+            display: flex;              /* CHANGED: Flex for side-by-side */
+            align-items: flex-start;    /* CHANGED: Top-align text with image */
+            justify-content: center;    /* Center the block horizontally */
+            flex-wrap: wrap;            /* Wrap on smaller screens */
+            gap: 40px;                  /* Space between image and text */
+            text-align: left;           /* CHANGED: Text aligns left */
+            max-width: 1200px;          /* CHANGED: Contain the layout */
+            margin: 50px auto;          /* CHANGED: Center section */
         }
-        }
+
         .about img {
-            max-width: 280px;
+            width: 600px;               /* CHANGED: Fixed width */
+            max-width: 100%;            /* CHANGED: Responsive */
             border-radius: 10px;
             transition: transform 0.3s ease;
+            height: auto;
         }
         .about img:hover {
             transform: scale(1.05);
         }
         .about-text {
-            max-width: 600;
-            text-align: left;
+            max-width: 500px;           /* CHANGED: Control text width */
         }
         .about-text p {
             font-size: 1.1em;
@@ -71,13 +75,12 @@
 
         /* Projects Section */
         .projects a {
-            display: block;        /* stack links vertically */
+            display: block;        
             color: white;
             font-size: 1.2em;
-            margin: 15px 0;        /* spacing between links */
+            margin: 15px 0;
             text-decoration: underline; /* always underlined */
             transition: color 0.3s ease;
-        }
         }
         .projects a:hover {
             color: #00aaff;
@@ -97,23 +100,24 @@
             color: #00aaff;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2em; }
-            h2 { font-size: 1.8em; }
+        /* === Responsive Design === */
+        @media (max-width: 900px) { /* CHANGED: Stack on smaller screens */
             .about {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
-                padding-left: 0;
             }
-            .about-text { max-width: 90%; text-align: center; }
-            .about img { max-width: 200px; }
+            .about-text { 
+                max-width: 90%; 
+                text-align: center;
+            }
         }
 
         @media (max-width: 480px) {
             h1 { font-size: 1.8em; }
             h2 { font-size: 1.5em; }
             .projects a { font-size: 1em; margin: 8px 12px; }
+            .about img { width: 90%; } /* CHANGED: Resize image on phones */
         }
     </style>
 </head>
@@ -126,7 +130,7 @@
 
     <!-- About Section -->
     <div class="section about">
-        <img src="railway.jpg" alt="Railway", width ="600">
+        <img src="railway.jpg" alt="Railway">
         <div class="about-text">
             <h2>About Me</h2>
             <p>Hey! My name is Charles Xiao, and this is my portfolio and blog. I'm currently an aerospace engineering student at the University of Illinois Urbana-Champaign. I'm most active in Ghost Electric Motorcycles, where I'm working on the drivetrain team. </p>
