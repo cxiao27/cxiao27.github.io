@@ -28,25 +28,36 @@
         hr {
             border: 1px solid white;
             width: 80%;
-            margin: 20px auto 30px auto;
+            margin: 20px auto 10px auto;
             opacity: 0.5;
         }
 
-        /* Home Button */
+        /* Project Title */
+        .project-title {
+            text-align: left;
+            font-size: 2.2em;
+            margin: 20px auto 40px auto;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        /* Home Icon */
         .home-button {
             position: absolute;
             top: 30px;
             right: 40px;
-            color: white;
-            text-decoration: underline;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
         }
-        .home-button:hover {
-            color: #00aaff;
+        .home-button img {
+            width: 35px;
+            height: 35px;
+            filter: invert(1); /* makes icon white */
+            transition: transform 0.2s ease;
+        }
+        .home-button img:hover {
+            transform: scale(1.1);
         }
 
-        /* Project Block (Image + Text) */
+        /* Project Blocks */
         .project-block {
             display: flex;
             align-items: flex-start;
@@ -70,12 +81,12 @@
             text-align: left;
         }
 
-        /* Optional: alternate background shade for separation */
+        /* Alternate background option */
         .alt-background {
             background-color: #111;
         }
 
-        /* Responsive for smaller screens */
+        /* Responsive */
         @media (max-width: 900px) {
             .project-block {
                 flex-direction: column;
@@ -88,24 +99,33 @@
                 width: 90%;
                 text-align: center;
             }
+            .project-title {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <div class="header">
-        <a href="index.html" class="home-button">Home</a>
+        <a href="index.html" class="home-button">
+            <img src="home-icon.png" alt="Home">
+        </a>
         <h1>Charles Xiao</h1>
         <hr>
+    </div>
+
+    <!-- Project Name -->
+    <div class="project-title">
+        Ghost Electric Motorcycles: Two Stage Drivetrain
     </div>
 
     <!-- Project Blocks -->
     <div class="project-block">
         <img src="image1.jpg" alt="Project Image 1">
         <div class="project-text">
-            <h2>Section 1 Title</h2>
             <p>
-                This is the first block of your project. Describe what this part of the project is about.
+                This is the first section describing the project. The image on the left complements this text block.
             </p>
         </div>
     </div>
@@ -113,9 +133,8 @@
     <div class="project-block alt-background">
         <img src="image2.jpg" alt="Project Image 2">
         <div class="project-text">
-            <h2>Section 2 Title</h2>
             <p>
-                This is the second block. You can alternate background colors for visual separation if you want.
+                Another section of the project with a different image and description.
             </p>
         </div>
     </div>
@@ -123,9 +142,8 @@
     <div class="project-block">
         <img src="image3.jpg" alt="Project Image 3">
         <div class="project-text">
-            <h2>Section 3 Title</h2>
             <p>
-                Third block of the project. Keep stacking as many blocks as needed.
+                Continue stacking blocks as needed to fully explain your project.
             </p>
         </div>
     </div>
