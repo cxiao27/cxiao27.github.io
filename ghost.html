@@ -236,7 +236,13 @@
         <div class="project-text">
             <h3 class="block-title">Modeling Drivetrain Dynamics for Gear Ratio Selection</h3>
             <p>
-                I built a Python script that models the different forces acting on the bike during movement. The forces considered were: drag, rolling resistance,Our team will be using a ZF75-7 motor, which has 110 Nm of peak torque and around 60 horsepower.
+                I built a Python script that models the different forces acting on the bike during movement. The forces considered were: drag, rolling resistance, wheel force, and friction (leading to efficiency losses).
+                Using this model, I created a differential equation that could be solved to obtain the position vs time graph. Taking the first and second derivatives would yield the velocity and acceleration graph, respectively.
+            </p>
+            <p>
+                 By simulating different gear ratios, I was able to determine the ideal output torque. Taking into account our tire's estimated coefficient of friction and ideal slip ratio (tires operate best at a certain slip ratio, typically around 10%-20%), 
+                I was able to determine the ideal torque to be around 600 Nm. This allows us to achieve strong acceleration, prevent excessive slippage, and achieve our goal of 100+ mph. Our team will be using a ZF75-7 motor, which has a peak torque of 110 Nm and approximately 60 horsepower.
+                This means that a 5.45 : 1 gear ratio is needed
             </p>
         </div>
     </div>
