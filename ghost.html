@@ -171,6 +171,7 @@
                 object-fit: contain;
             }
         }
+
         /* Stack only the images in the drivetrain section */
         .stacked-images .image-column {
             display: flex;
@@ -179,9 +180,10 @@
         }
         
         .stacked-images .image-column img {
-            width: 100%;
+            width: 100%; /* overrides global width */
             max-width: 500px; /* optional limit */
             border-radius: 10px;
+            display: block;
         }
 
     </style>
@@ -260,7 +262,7 @@
         </div>
     </div>
 
-    <div class="project-block">
+    <div class="project-block stacked-images">
         <div class="image-column">
             <img src="initial design.png" alt="Side View">
             <img src="initial design2.png" alt="Side View 2">
@@ -269,7 +271,7 @@
             <h3 class="block-title">Drivetrain Design and Integration</h3>
             <p>
                 Given the required 5.2 : 1 reduction, using a single stage drivetrain isn't feasible due how excessively large the rear sprocket would need to be.
-                Therefore, we decided on a two-stage system with an 18:10 ratio between the motor and jackshaft and a 43:19 ratio between the jackshaft and wheel. 
+                Therefore, we decided on a two-stage system with an 18:10 ratio between the motor and jackshaft and a 43:15 ratio between the jackshaft and wheel. 
                 This ultimately left us with a 5.16 : 1 reduction, very close to ideal.
             </p>
             <p>
@@ -289,12 +291,8 @@
             <p>
                
             </p>
-            <
         </div>
     </div>
 
-
-
-    
 </body>
 </html>
