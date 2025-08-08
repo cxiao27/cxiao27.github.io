@@ -171,6 +171,19 @@
                 object-fit: contain;
             }
         }
+        /* Stack only the images in the drivetrain section */
+        .stacked-images .image-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* space between images */
+        }
+        
+        .stacked-images .image-column img {
+            width: 100%;
+            max-width: 500px; /* optional limit */
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -248,8 +261,10 @@
     </div>
 
     <div class="project-block">
-        <img src="initial design.png" alt="Side View">
-        <img src="initial design2.png" alt="Side View 2">
+        <div class="image-column">
+            <img src="initial design.png" alt="Side View">
+            <img src="initial design2.png" alt="Side View 2">
+        </div>
         <div class="project-text">
             <h3 class="block-title">Drivetrain Design and Integration</h3>
             <p>
