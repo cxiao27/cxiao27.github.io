@@ -241,19 +241,43 @@
             </p>
             <p>
                  By simulating different gear ratios, I was able to determine the ideal output torque. Taking into account our tire's estimated coefficient of friction and ideal slip ratio (tires operate best at a certain slip ratio, typically around 10%-20%), 
-                I was able to determine the ideal torque to be around 600 Nm. This allows us to achieve strong acceleration, prevent excessive slippage, and achieve our goal of 100+ mph. Our team will be using a ZF75-7 motor, which has a peak torque of 110 Nm and approximately 60 horsepower.
-                This means that a 5.45 : 1 gear ratio is needed
-            </p>
+                I was able to determine the ideal torque to be around 575 Nm. This allows us to achieve strong acceleration, prevent excessive slippage, and achieve our goal of 100+ mph. Our team will be using a ZF75-7 motor, which has a peak torque of 110 Nm and approximately 60 horsepower.
+                This means that a 5.2 : 1 gear ratio is needed
+            </p> 
         </div>
     </div>
 
     <div class="project-block">
-        <img src="image3.jpg" alt="Project Image 3">
-        <div class="project-text">
+        <img src="picture1.png" alt="Side View">
+        <div class="Drivetrain Design and Integration">
             <p>
-                Continue stacking blocks as needed to fully explain your project.
+                Given the required 5.2 : 1 reduction, using a single stage drivetrain isn't feasible due how excessively large the rear sprocket would need to be.
+                Therefore, we decided on a two-stage system with an 18:10 ratio between the motor and jackshaft and a 43:19 ratio between the jackshaft and wheel. 
+                This ultimately left us with a 5.16 : 1 reduction, very close to ideal.
+            </p>
+            <p>
+                The primary design challenge was the lack of packaging space. We needed to avoid interference with the battery and suspension while maintaining structural integrity and optimal anti-squat geometry (more on this in the next section).
+            </p>
+            <p>
+                The final configuration I came up with mounts the motor as low as possible, just slightly above the bottom fairing of the stock ZX-6R. This leaves more room for the battery and BMS and makes it easier to direct airflow to the motor for cooling purposes later on. 
+                The jackshaft location is parameterized relative to the suspension pivot for easy anti-squat tuning. The material I selected for the motor mounts was 1/4" sheet metal due to its low cost and ease of manufacturing. With free access to our school's waterjet cutter, I'm able to quickly design different prototypes at a low cost.
             </p>
         </div>
     </div>
+
+    <div class="project-block alt-background">
+        <img src="velo_graph.png" alt="Velocity vs Time">
+        <div class="project-text">
+            <h3 class="block-title">Calculating and Optimizing Anti-Squat</h3>
+            <p>
+               
+            </p>
+            <
+        </div>
+    </div>
+
+
+
+    
 </body>
 </html>
