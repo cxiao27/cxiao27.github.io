@@ -285,11 +285,24 @@
     </div>
 
     <div class="project-block alt-background">
-        <img src="antisquat.png" alt="Anti-Squat">
+         <div class="image-column">
+            <img src="antisquat.png" alt="Anti-Squat">
+            <img src="antisquat-py.png" alt="Anti-squat calculations">
+        </div>
+        
         <div class="project-text">
             <h3 class="block-title">Calculating and Optimizing Anti-Squat</h3>
             <p>
-               
+               Anti-squat is a suspension characteristic that determines how much the rear suspension compresses (or "squats") under acceleration. Anti-squat is typically expressed as a percentage where 100% means that the suspension stays perfectly still under acceleration.
+                Anti-squat percentages <100% (sometimes known as pro-squat) mean that the suspension will compress during acceleration. The physics behind how this works can be a difficult concept to wrap your head around, but tuning anti-squat properly is imperative for performance.
+                Too much anti-squat and the bike can spin out and lose traction. Too little anti-squat and you lose power and the ability to corner efficiently.
+            </p>
+            <p>
+               Since the bike is currently in its early stages, it's hard to determine what the "neutral" position of the suspension will be with the rider on the bike.
+                For now, a rough estimate will be used, and the jackshaft position can be adjusted later during testing to get us closer to our ideal value (stay tuned for that). Being able to easily prototype and change the motor mount geometry is one of the key reasons I chose to use sheet metal.
+            </p>
+            <p>
+                However, one of the factors that we can calculate right now is what our ideal anti-squat percentage will be. While I can't disclose the exact number, I was able to build a simple calculator in Python that would help us determine where we would need to place our jackshaft.
             </p>
         </div>
     </div>
