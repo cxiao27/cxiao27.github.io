@@ -309,5 +309,24 @@
         </div>
     </div>
 
+        <div class="project-block stacked-images">
+        <div class="image-column">
+            <img src="max_stress_2.png" alt="Von Mieses Stress">
+            <img src="total_deformation.png" alt="Total Deformation">
+            <img src="two-mounts.png" alt="Mount Comparison">
+        </div>
+        <div class="project-text">
+            <h3 class="block-title">Motor Mount FEA</h3>
+            <p>
+                I wanted to quickly make sure that the motor mounting pieces could safely handle the forces during drive, so I ran an FEA simulation in ANSYS Mechanical. Based on the results, the maximum equivalent (Von Mises) stress that the motor mount undergoes is 2.7569 × 10<sup>7</sup> Pa or 27.57 MPa. The yield stress of A36 Steel 
+                (the type of steel in our sheet metal plates) is around 250 MPa, giving us a safety factor of around 9. From the total deformation results, the maximum deformation is 0.004 mm, meaning the mount behaves as essentially rigid under load. This means that I can remove material while staying well within the desired safety factor of 3.
+            </p>
+            <p>
+                I decided to remove material around low stress around and add material in higher stress areas. After a couple of iterations, I achieved a design I liked. It has a 26% weight reduction from the original while staying well within our desired safety factors. While I'm sure further weight reductions are possible, the marginal benefit didn't seem worth the additional effort, which could be better directed elsewhere.
+            </p>
+        </div>
+    </div>
+
+    
 </body>
 </html>
