@@ -13,7 +13,6 @@
             padding: 0;
         }
 
-        /* Header */
         .header {
             position: relative;
             padding: 30px 20px 0 20px;
@@ -44,7 +43,6 @@
             transform: scale(1.1);
         }
 
-        /* Title */
         .project-title {
             text-align: left;
             font-size: 2.2em;
@@ -53,27 +51,23 @@
             max-width: 1200px;
         }
 
-        /* Top media row (image + video) */
         .top-media {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 20px;
             width: 90%;
             max-width: 1400px;
             margin: 0 auto 30px auto;
-            flex-wrap: wrap;
+            gap: 20px;
         }
         .top-media img,
         .top-media video {
-            flex: 1 1 600px;
-            max-width: 100%;
-            border-radius: 10px;
+            flex: 1 1 50%;
+            width: 50%;
             height: auto;
+            border-radius: 10px;
             background: #111;
+            object-fit: cover;
         }
 
-        /* Content block: text + tall video */
         .content-block {
             display: flex;
             align-items: flex-start;
@@ -101,11 +95,13 @@
             background: #111;
         }
 
-        /* Responsive */
         @media (max-width: 900px) {
             .project-title {
                 text-align: center;
                 width: 90%;
+            }
+            .top-media {
+                flex-direction: column;
             }
             .content-block {
                 flex-direction: column;
@@ -120,7 +116,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <div class="header">
         <a href="index.html" class="home-button">
             <img src="home-icon.png" alt="Home">
@@ -133,21 +128,18 @@
         <hr>
     </div>
 
-    <!-- Project Title -->
     <div class="project-title">
         FPV Racing Drone
     </div>
 
-    <!-- Top media: image + DVR video -->
     <div class="top-media">
         <img src="drone_pic.png" alt="FPV drone pic">
-        <video controls playsinline preload="metadata" poster="poster-clip-2.jpg">
+        <video controls playsinline preload="auto" poster="" >
             <source src="drone_dvr.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
-    <!-- Content: paragraph + tall video -->
     <div class="content-block">
         <div class="content-text">
             <p>
@@ -160,7 +152,7 @@
         </div>
 
         <div class="content-media">
-            <video controls playsinline preload="metadata" poster="poster-clip-1.jpg">
+            <video controls playsinline preload="auto" poster="">
                 <source src="punchout.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
