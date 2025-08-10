@@ -59,4 +59,115 @@
             max-width: 1400px;
             margin: 20px auto 30px auto;
             border-radius: 10px;
-            overflow: hidden
+            overflow: hidden;
+        }
+        .hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Content block: text + two stacked videos */
+        .content-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            padding: 10px 20px 60px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .content-text {
+            flex: 1 1 520px;
+            font-size: 1.1em;
+            line-height: 1.6em;
+            text-align: left;
+        }
+        .content-media {
+            flex: 1 1 520px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .content-media video,
+        .content-media img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            background: #111;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .project-title {
+                text-align: center;
+                width: 90%;
+            }
+            .content-block {
+                flex-direction: column-reverse;
+                gap: 30px;
+            }
+            .content-text {
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <a href="index.html" class="home-button">
+            <img src="home-icon.png" alt="Home">
+        </a>
+        <h1>
+            <a href="index.html" style="text-decoration: none; color: inherit; display: inline-block;">
+                Charles Xiao
+            </a>
+        </h1>
+        <hr>
+    </div>
+
+    <!-- Project Title -->
+    <div class="project-title">
+        FPV Racing Drone
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero">
+        <!-- Replace with your image -->
+        <img src="your-hero-image.jpg" alt="FPV drone build on workbench">
+    </div>
+
+    <!-- Content: paragraph + two videos -->
+    <div class="content-block">
+        <div class="content-text">
+            <!-- Replace with your paragraph -->
+            <p>
+                This build is a 5″ FPV racing quad focused on high thrust-to-weight and low latency.
+                I selected components to keep total cost under $250, tuned basic PIDs, and recorded DVR footage
+                from the goggles for testing line handling and throttle response. Peak acceleration measured ~8.2 g,
+                and the craft holds 120 km/h on a clean pass with stable video link. Below are two short clips:
+                a smooth line through a park section and a quick burst test down a straight.
+            </p>
+        </div>
+
+        <div class="content-media">
+            <!-- Video 1 -->
+            <video controls playsinline preload="metadata" poster="poster-clip-1.jpg">
+                <source src="clip-1.mp4" type="video/mp4">
+                <source src="clip-1.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Video 2 -->
+            <video controls playsinline preload="metadata" poster="poster-clip-2.jpg">
+                <source src="clip-2.mp4" type="video/mp4">
+                <source src="clip-2.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
