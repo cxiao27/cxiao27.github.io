@@ -45,19 +45,19 @@
 
         /* === About Section === */
         .about {
-            display: flex;              /* CHANGED: Flex for side-by-side */
-            align-items: flex-start;    /* CHANGED: Top-align text with image */
-            justify-content: center;    /* Center the block horizontally */
-            flex-wrap: wrap;            /* Wrap on smaller screens */
-            gap: 40px;                  /* Space between image and text */
-            text-align: left;           /* CHANGED: Text aligns left */
-            max-width: 1200px;          /* CHANGED: Contain the layout */
-            margin: 50px auto;          /* CHANGED: Center section */
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: left;
+            max-width: 1200px;
+            margin: 50px auto;
         }
 
         .about img {
-            width: 600px;               /* CHANGED: Fixed width */
-            max-width: 100%;            /* CHANGED: Responsive */
+            width: 600px;
+            max-width: 100%;
             border-radius: 10px;
             transition: transform 0.3s ease;
             height: auto;
@@ -66,7 +66,7 @@
             transform: scale(1.05);
         }
         .about-text {
-            max-width: 500px;           /* CHANGED: Control text width */
+            max-width: 500px;
         }
         .about-text p {
             font-size: 1.1em;
@@ -79,7 +79,7 @@
             color: white;
             font-size: 1.2em;
             margin: 15px 0;
-            text-decoration: underline; /* always underlined */
+            text-decoration: underline;
             transition: color 0.3s ease;
         }
         .projects a:hover {
@@ -88,8 +88,7 @@
         }
 
         /* Contact Me Section */
-        .contact-links a,
-        .contact-links button {
+        .contact-links a {
             display: block;
             color: white;
             font-size: 1.2em;
@@ -100,13 +99,11 @@
             border: none;
             cursor: pointer;
         }
-        .contact-links a:hover,
-        .contact-links button:hover {
+        .contact-links a:hover {
             color: #00aaff;
         }
 
-        /* === Responsive Design === */
-        @media (max-width: 900px) { /* CHANGED: Stack on smaller screens */
+        @media (max-width: 900px) {
             .about {
                 flex-direction: column;
                 align-items: center;
@@ -122,7 +119,7 @@
             h1 { font-size: 1.8em; }
             h2 { font-size: 1.5em; }
             .projects a { font-size: 1em; margin: 8px 12px; }
-            .about img { width: 90%; } /* CHANGED: Resize image on phones */
+            .about img { width: 90%; }
         }
     </style>
 </head>
@@ -157,30 +154,20 @@
 
     <hr>
 
-    <!-- Contact Me Section (obfuscated emails) -->
+    <!-- Contact Me Section -->
     <div class="section">
         <h2>Contact Me</h2>
         <div class="contact-links">
             <a href="https://www.linkedin.com/in/charles-xiao-engineer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-
-            <!-- No raw emails in the HTML -->
             <a href="#" class="email-link"
-               data-u="charlesxiao05" data-d="gmail" data-t="com"
-               aria-label="Reveal personal email">
-               Personal Email (click to reveal)
+               data-u="cx" data-d="charlesxiao" data-t="xyz"
+               aria-label="Reveal email">
+               Email
             </a>
-
-            <a href="#" class="email-link"
-               data-u="cx40" data-d="illinois" data-t="edu"
-               aria-label="Reveal school email">
-               School Email (click to reveal)
-            </a>
-
             <noscript>
                 <div style="margin-top:8px;opacity:0.8;">
-                    Enable JavaScript to reveal emails. Or use (obfuscated):
-                    <span>charlesxiao05 [at] gmail [dot] com</span> •
-                    <span>cx40 [at] illinois [dot] edu</span>
+                    Enable JavaScript to reveal email. Or use:
+                    <span>cx [at] charlesxiao [dot] xyz</span>
                 </div>
             </noscript>
         </div>
@@ -198,25 +185,19 @@
         }, { threshold: 0.1 });
         sections.forEach(section => observer.observe(section));
 
-        // === Email reveal-on-click (2-step to reduce scraping) ===
-        // First click: reveal text + set mailto href. Second click: open mail client.
+        // Email reveal-on-click
         document.querySelectorAll('.email-link').forEach(link => {
             link.addEventListener('click', e => {
                 const revealed = link.dataset.revealed === '1';
-                // Build address using a Unicode escape for '@' to dodge basic regex scrapers
                 const addr = `${link.dataset.u}\u0040${link.dataset.d}.${link.dataset.t}`;
-
                 if (!revealed) {
-                    e.preventDefault(); // stop navigation on first click
-                    link.textContent = addr; // reveal address
+                    e.preventDefault();
+                    link.textContent = addr;
                     link.setAttribute('href', 'mailto:' + addr);
                     link.setAttribute('rel', 'nofollow noopener noreferrer');
-                    link.dataset.revealed = '1'; // next click will follow mailto
+                    link.dataset.revealed = '1';
                 }
-                // If already revealed, default link behavior (mailto) proceeds
             });
-
-            // Accessibility: make it keyboard-activatable
             link.setAttribute('role', 'button');
         });
     </script>
