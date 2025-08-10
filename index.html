@@ -88,15 +88,20 @@
         }
 
         /* Contact Me Section */
-        .contact-links a {
+        .contact-links a,
+        .contact-links button {
             display: block;
             color: white;
             font-size: 1.2em;
-            margin: 10px 0;
+            margin: 10px auto;
             text-decoration: underline;
             transition: color 0.3s ease;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
-        .contact-links a:hover {
+        .contact-links a:hover,
+        .contact-links button:hover {
             color: #00aaff;
         }
 
@@ -152,13 +157,32 @@
 
     <hr>
 
-    <!-- Contact Me Section -->
+    <!-- Contact Me Section (obfuscated emails) -->
     <div class="section">
         <h2>Contact Me</h2>
         <div class="contact-links">
-            <a href="https://www.linkedin.com/in/charles-xiao-engineer/" target="_blank">LinkedIn</a>
-            <a href="mailto:personal@example.com">Personal Email: charlesxiao05@gmail.com</a>
-            <a href="mailto:work@example.com">Work Email: cx40@illinois.edu</a>
+            <a href="https://www.linkedin.com/in/charles-xiao-engineer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+            <!-- No raw emails in the HTML -->
+            <a href="#" class="email-link"
+               data-u="charlesxiao05" data-d="gmail" data-t="com"
+               aria-label="Reveal personal email">
+               Personal Email (click to reveal)
+            </a>
+
+            <a href="#" class="email-link"
+               data-u="cx40" data-d="illinois" data-t="edu"
+               aria-label="Reveal school email">
+               School Email (click to reveal)
+            </a>
+
+            <noscript>
+                <div style="margin-top:8px;opacity:0.8;">
+                    Enable JavaScript to reveal emails. Or use (obfuscated):
+                    <span>charlesxiao05 [at] gmail [dot] com</span> •
+                    <span>cx40 [at] illinois [dot] edu</span>
+                </div>
+            </noscript>
         </div>
     </div>
 
@@ -173,6 +197,28 @@
             });
         }, { threshold: 0.1 });
         sections.forEach(section => observer.observe(section));
+
+        // === Email reveal-on-click (2-step to reduce scraping) ===
+        // First click: reveal text + set mailto href. Second click: open mail client.
+        document.querySelectorAll('.email-link').forEach(link => {
+            link.addEventListener('click', e => {
+                const revealed = link.dataset.revealed === '1';
+                // Build address using a Unicode escape for '@' to dodge basic regex scrapers
+                const addr = `${link.dataset.u}\u0040${link.dataset.d}.${link.dataset.t}`;
+
+                if (!revealed) {
+                    e.preventDefault(); // stop navigation on first click
+                    link.textContent = addr; // reveal address
+                    link.setAttribute('href', 'mailto:' + addr);
+                    link.setAttribute('rel', 'nofollow noopener noreferrer');
+                    link.dataset.revealed = '1'; // next click will follow mailto
+                }
+                // If already revealed, default link behavior (mailto) proceeds
+            });
+
+            // Accessibility: make it keyboard-activatable
+            link.setAttribute('role', 'button');
+        });
     </script>
 </body>
 </html>
