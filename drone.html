@@ -95,22 +95,51 @@
             background: #111;
         }
 
+        /* Improved Mobile Formatting */
         @media (max-width: 900px) {
             .project-title {
                 text-align: center;
-                width: 90%;
+                font-size: 1.8em;
+                width: 95%;
             }
             .top-media {
                 flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            .top-media img,
+            .top-media video {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
             }
             .content-block {
                 flex-direction: column;
-                gap: 30px;
+                gap: 20px;
+                align-items: center;
             }
             .content-text {
                 text-align: center;
                 width: 90%;
-                margin: 0 auto;
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+            .content-media video {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        /* Extra Small Screens */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2em;
+            }
+            .project-title {
+                font-size: 1.5em;
+            }
+            .content-text {
+                font-size: 0.95em;
             }
         }
     </style>
@@ -134,7 +163,7 @@
 
     <div class="top-media">
         <img src="drone_pic.png" alt="FPV drone pic">
-        <video controls playsinline preload="auto" poster="" >
+        <video controls playsinline preload="auto">
             <source src="drone_dvr.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -152,7 +181,7 @@
         </div>
 
         <div class="content-media">
-            <video controls playsinline preload="auto" poster="">
+            <video controls playsinline preload="auto">
                 <source src="punchout.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
