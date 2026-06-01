@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPV Drone - Charles Xiao</title>
+    <title>FPV Racing Drone Build | Charles Xiao</title>
+    <meta name="description" content="Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.">
+    <link rel="canonical" href="https://charlesxiao.xyz/drone.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FPV Racing Drone Build | Charles Xiao">
+    <meta property="og:description" content="Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.">
+    <meta property="og:url" content="https://charlesxiao.xyz/drone.html">
+    <meta property="og:image" content="https://charlesxiao.xyz/drone_pic.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@charlesxiao_">
+    <meta name="twitter:title" content="FPV Racing Drone Build | Charles Xiao">
+    <meta name="twitter:description" content="Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.">
+    <meta name="twitter:image" content="https://charlesxiao.xyz/drone_pic.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
             color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Sora', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -19,6 +35,11 @@
             text-align: center;
         }
         h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .site-title {
             font-size: 3em;
             margin: 0;
         }
@@ -143,27 +164,42 @@
             }
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "FPV Racing Drone Build",
+      "description": "Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.",
+      "url": "https://charlesxiao.xyz/drone.html",
+      "image": "https://charlesxiao.xyz/drone_pic.png",
+      "author": {
+        "@type": "Person",
+        "name": "Charles Xiao",
+        "url": "https://charlesxiao.xyz"
+      }
+    }
+    </script>
 </head>
 <body>
     <div class="header">
         <a href="index.html" class="home-button">
-            <img src="home-icon.png" alt="Home">
+            <img src="home-icon.png" alt="Return to homepage" width="512" height="512">
         </a>
-        <h1>
+        <p class="site-title">
             <a href="index.html" style="text-decoration: none; color: inherit; display: inline-block;">
                 Charles Xiao
             </a>
-        </h1>
+        </p>
         <hr>
     </div>
 
-    <div class="project-title">
+    <h1 class="project-title">
         FPV Racing Drone
-    </div>
+    </h1>
 
     <div class="top-media">
-        <img src="drone_pic.png" alt="FPV drone pic">
-        <video controls playsinline preload="auto">
+        <img src="drone_pic.png" alt="Completed 5-inch FPV racing drone build" width="1272" height="955">
+        <video controls playsinline preload="metadata">
             <source src="drone_dvr.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -181,11 +217,16 @@
         </div>
 
         <div class="content-media">
-            <video controls playsinline preload="auto">
+            <video controls playsinline preload="metadata">
                 <source src="punchout.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
+    </div>
+    <div style="text-align: center; padding: 30px 20px 60px;">
+        <hr style="border: 1px solid white; width: 80%; margin: 0 auto 24px; opacity: 0.5;">
+        <p style="color: #aaa; margin: 0 0 12px; font-size: 0.95em;">other projects</p>
+        <a href="ghost.html" style="color: white; font-size: 1.1em; text-decoration: underline;">Ghost Electric Motorcycles: Two Stage Drivetrain</a>
     </div>
 </body>
 </html>

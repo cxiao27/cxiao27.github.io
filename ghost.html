@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghost Drivetrain - Charles Xiao</title>
+    <title>Two-Stage Electric Motorcycle Drivetrain | Charles Xiao</title>
+    <meta name="description" content="Designing and building a two-stage chain drivetrain for an electric motorcycle conversion, including Python dynamics modeling, CAD packaging, and FEA validation in ANSYS.">
+    <link rel="canonical" href="https://charlesxiao.xyz/ghost.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Two-Stage Electric Motorcycle Drivetrain | Charles Xiao">
+    <meta property="og:description" content="Designing and building a two-stage chain drivetrain for an electric motorcycle conversion, including Python dynamics modeling, CAD packaging, and FEA validation in ANSYS.">
+    <meta property="og:url" content="https://charlesxiao.xyz/ghost.html">
+    <meta property="og:image" content="https://charlesxiao.xyz/full_bike2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@charlesxiao_">
+    <meta name="twitter:title" content="Two-Stage Electric Motorcycle Drivetrain | Charles Xiao">
+    <meta name="twitter:description" content="Designing and building a two-stage chain drivetrain for an electric motorcycle conversion, including Python dynamics modeling, CAD packaging, and FEA validation in ANSYS.">
+    <meta name="twitter:image" content="https://charlesxiao.xyz/full_bike2.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
             color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Sora', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -28,6 +44,11 @@
         }
 
         h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .site-title {
             font-size: 3em;
             margin: 0;
         }
@@ -106,13 +127,14 @@
         }
 
         .project-block img {
-            width: 45%;
+            width: 54%;
             max-width: 550px;
+            height: auto;
             border-radius: 10px;
         }
 
         .project-text {
-            width: 60%;
+            width: 50%;
             font-size: 1.1em;
             line-height: 1.5em;
             text-align: left;
@@ -131,7 +153,6 @@
         .image-row img {
             height: 300px;
             width: auto;
-            object-fit: cover;
             border-radius: 10px;
         }
 
@@ -178,157 +199,180 @@
             flex-direction: column;
             gap: 15px; /* space between images */
         }
-        
+
         .stacked-images .image-column img {
-            width: 100%; /* overrides global width */
-            max-width: 550px; /* optional limit */
+            width: 100%;
+            max-width: 660px;
+            height: auto;
             border-radius: 10px;
             display: block;
         }
 
+        /* Side-by-side image pair inside a project block */
+        .image-pair {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            flex: 1 1 54%;
+        }
+
+        .image-pair img {
+            width: calc(50% - 5px);
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        @media (max-width: 900px) {
+            .image-pair {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            .image-pair img {
+                width: 80%;
+            }
+        }
+
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Two-Stage Electric Motorcycle Drivetrain",
+      "description": "Designing and building a two-stage chain drivetrain for an electric motorcycle conversion, including Python dynamics modeling, CAD packaging, and FEA validation in ANSYS.",
+      "url": "https://charlesxiao.xyz/ghost.html",
+      "image": "https://charlesxiao.xyz/full_bike2.png",
+      "author": {
+        "@type": "Person",
+        "name": "Charles Xiao",
+        "url": "https://charlesxiao.xyz"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
     <div class="header">
         <a href="index.html" class="home-button">
-            <img src="home-icon.png" alt="Home">
+            <img src="home-icon.png" alt="Return to homepage" width="512" height="512">
         </a>
-       <h1>
+       <p class="site-title">
           <a href="index.html" style="text-decoration: none; color: inherit; display: inline-block;">
             Charles Xiao
           </a>
-        </h1>
+        </p>
 
         <hr>
     </div>
 
     <!-- Project Title -->
-    <div class="project-title">
+    <h1 class="project-title">
         Ghost Electric Motorcycles: Two Stage Drivetrain
-    </div>
+    </h1>
 
     <!-- Aligned Image Row -->
     <div class="image-row">
-        <img src="full_bike2.png" alt="Full Bike">
-        <img src="drivetrain_1.png" alt="Drivetrain_1">
-        <img src="drivetrain_2.png" alt="Drivetrain_2">
+        <img src="full_bike2.png" alt="Full bike build" width="1144" height="688">
+        <img src="ghost_final_assembly.png" alt="Final assembly of the drivetrain" width="842" height="639">
     </div>
 
-    <!-- Project Summary -->
-    <div class="project-summary">
-        <h2>Project Summary</h2>
-        <ul>
-            <li>The goal of this project was to design a drivetrain to convert a 2005 Kawasaki Ninja ZX-6R into an electric motorcycle. Our team planned to race our bike in the AHRMA Formula Lightning competition,
-                but that event was cancelled. However, we still plan on building a bike designed for racing.</li>
-            <li>Since we wanted optimal performance on the track, I first wrote a Python script that modeled the different forces acting on the bike. Using differential equations, I was able to model how the bike's position changed over time</li>
-            <li>The biggest challenge was working with very limited space; I tried several different configurations that ensured everything fit on the frame without interfering with the suspension or battery. The configuration I finally settled on bringing the motor as low as possible and left ample room for the battery and BMS</li>
-            <li>FEA and hand calcs were used to validate our design, ensuring that the components were strong enough to handle the torque and chain tension. The FEA simulation helped me identify low and high stress areas. I was able to adjust the geometry accordingly, adding material where it was needed and removing it where it wasn't.</li>
-        </ul>
-    </div>
-
-    <!-- Detailed Overview Title -->
-    <hr>
-    <div class="project-summary">
-        <h2>Detailed Overview</h2>
-    </div>
 
     <!-- Project Blocks -->
     <div class="project-block">
-        <img src="frame_1.png" alt="ZX-6R Frame">
+        <img src="frame_1.png" alt="ZX-6R Frame" width="812" height="636">
         <div class="project-text">
             <h3 class="block-title">Objective</h3>
             <p>
-                As previously stated, our team wanted to build a high-performance superbike for AHRMA Formula Lightning. Since this is our team's first bike, our main goal was to build a functional bike capable of reaching a top speed over 100 mph. 
-                To the left is the frame we're building off of: a 2005 Kawasaki Ninja ZX-6R
+                Our team set out to convert a 2005 Kawasaki Ninja ZX-6R into a high-performance electric superbike, targeting a top speed of 100+ mph for the AHRMA Formula Lightning competition.
             </p>
         </div>
     </div>
 
    <div class="project-block stacked-images alt-background">
         <div class="image-column">
-            <img src="velo_graph.png" alt="Velocity vs Time">
-            <img src="accel_graph.png" alt="Acceleration vs Time">
+            <img src="velo_graph.png" alt="Velocity vs Time" width="462" height="371">
+            <img src="accel_graph.png" alt="Acceleration vs Time" width="461" height="361">
         </div>
         <div class="project-text">
             <h3 class="block-title">Modeling Drivetrain Dynamics for Gear Ratio Selection</h3>
             <p>
-                I built a Python script that models the different forces acting on the bike during movement. The forces considered were: drag, rolling resistance, wheel force, and friction (leading to efficiency losses).
-                Using this model, I created a differential equation that could be solved to obtain the position vs time graph. Taking the first and second derivatives would yield the velocity and acceleration graph, respectively.
-            </p>
-            <p>
-                 By simulating different gear ratios, I was able to determine the ideal output torque. Taking into account our tire's estimated coefficient of friction and ideal slip ratio (tires operate best at a certain slip ratio, typically around 10%-20%), 
-                I was able to determine the ideal torque to be around 575 Nm. This allows us to achieve strong acceleration, prevent excessive slippage, and achieve our goal of 100+ mph. Our team will be using a ZF75-7 motor, which has a peak torque of 110 Nm and approximately 60 horsepower.
-                This means that a 5.2 : 1 gear ratio is needed
+                I built a Python script to model the forces acting on the bike (drag, rolling resistance, and wheel force), solving a differential equation to generate velocity and acceleration curves over time. By simulating different gear ratios and accounting for tire friction and slip ratio, I determined an ideal output torque of ~575 Nm, requiring a 5.2:1 reduction from our ZF75-7 motor's 110 Nm peak output.
             </p> 
         </div>
     </div>
 
     <div class="project-block stacked-images">
         <div class="image-column">
-            <img src="initial design.png" alt="Side View">
-            <img src="initial design2.png" alt="Side View 2">
+            <img src="initial design.png" alt="Initial drivetrain CAD layout, side view" width="964" height="655">
+            <img src="initial design2.png" alt="Revised drivetrain CAD layout, side view" width="1165" height="657">
         </div>
         <div class="project-text">
             <h3 class="block-title">Drivetrain Design and Integration</h3>
             <p>
-                Given the required 5.2 : 1 reduction, using a single stage drivetrain isn't feasible due to how excessively large the rear sprocket would need to be.
-                Therefore, I decided on a two-stage system with an 18:10 ratio between the motor and jackshaft and a 43:15 ratio between the jackshaft and wheel. 
-                This ultimately left us with a 5.16:1 reduction, very close to ideal.
-            </p>
-            <p>
-                The primary design challenge was the lack of packaging space. I needed to avoid interference with the battery and suspension while maintaining structural integrity and optimal anti-squat geometry (more on this in the next section).
-            </p>
-            <p>
-                The final configuration I came up with mounts the motor as low as possible, just slightly above the bottom fairing of the stock ZX-6R. This leaves more room for the battery and BMS and makes it easier to direct airflow to the motor for cooling purposes later on. 
-                The jackshaft location is parameterized relative to the suspension pivot for easy anti-squat tuning. The material I selected for the motor mounts was 1/4" sheet metal due to its low cost and ease of manufacturing. With free access to our school's waterjet cutter, I'm able to quickly design different prototypes at a low cost.
+                A single-stage reduction wasn't viable at 5.2:1, so I designed a two-stage system with an 18:10 ratio from motor to jackshaft and a 43:15 ratio from jackshaft to wheel, landing at a 5.16:1 reduction. The biggest challenge was packaging: the motor sits as low as possible above the bottom fairing, freeing space for the battery and BMS, while the jackshaft position is parameterized relative to the suspension pivot for easy anti-squat tuning.
             </p>
         </div>
     </div>
 
     <div class="project-block stacked-images alt-background">
          <div class="image-column">
-            <img src="antisquat.png" alt="Anti-Squat">
-            <img src="antisquat-py.png" alt="Anti-squat calculations">
+            <img src="antisquat.png" alt="Anti-squat geometry diagram for jackshaft placement" width="609" height="417">
+            <img src="antisquat-py.png" alt="Anti-squat calculations" width="745" height="752">
         </div>
         
         <div class="project-text">
             <h3 class="block-title">Calculating and Optimizing Anti-Squat</h3>
             <p>
-               Anti-squat is a suspension characteristic that determines how much the rear suspension compresses (or "squats") under acceleration. Anti-squat is typically expressed as a percentage where 100% means that the suspension stays perfectly still under acceleration.
-                Anti-squat percentages <100% (sometimes known as pro-squat) mean that the suspension will compress during acceleration. The physics behind how this works can be a difficult concept to wrap your head around, but tuning anti-squat properly is imperative for performance.
-                Too much anti-squat and the bike can spin out and lose traction. Too little anti-squat and you lose power and the ability to corner efficiently.
-            </p>
-            <p>
-               Since the bike is currently in its early stages, it's hard to determine what the "neutral" position of the suspension will be with the rider on the bike.
-                For now, a rough estimate will be used, and the jackshaft position can be adjusted later during testing to get us closer to our ideal value (stay tuned for that). Being able to easily prototype and change the motor mount geometry is one of the key reasons I chose to use sheet metal.
-            </p>
-            <p>
-                However, one of the factors that I can calculate right now is what our ideal anti-squat percentage will be. While I can't disclose the exact number, I was able to build a simple calculator in Python that would help us determine where I would need to place our jackshaft.
+                Anti-squat describes how much the rear suspension compresses under acceleration: too much and the bike loses traction, while too little hurts cornering efficiency. I built a Python calculator to determine our ideal anti-squat percentage and the corresponding jackshaft position, with the mount geometry designed to be easily adjusted during testing.
             </p>
         </div>
     </div>
 
         <div class="project-block stacked-images">
         <div class="image-column">
-            <img src="max_stress_2.png" alt="Von Mieses Stress">
-            <img src="total_deformation.png" alt="Total Deformation">
-            <img src="two-mounts.png" alt="Mount Comparison">
+            <img src="max_stress_2.png" alt="Von Mises stress distribution from ANSYS FEA simulation" width="1165" height="569">
+            <img src="total_deformation.png" alt="Total Deformation" width="1425" height="591">
+            <img src="two-mounts.png" alt="Motor mount comparison before and after topology optimization" width="947" height="611">
         </div>
         <div class="project-text">
             <h3 class="block-title">Motor Mount FEA</h3>
             <p>
-                I wanted to quickly make sure that the motor mounting pieces could safely handle the forces during drive, so I ran an FEA simulation in ANSYS Mechanical. Based on the results, the maximum equivalent (Von Mises) stress that the motor mount undergoes is 2.7569 × 10<sup>7</sup> Pa or 27.57 MPa. The yield stress of A36 Steel 
-                (the type of steel in our sheet metal plates) is around 250 MPa, giving us a safety factor of around 9. From the total deformation results, the maximum deformation is 0.004 mm, meaning the mount behaves as essentially rigid under load. This means that I can remove material while staying well within the desired safety factor of 3.
-            </p>
-            <p>
-                I decided to remove material around low stress around and add material in higher stress areas. After a couple of iterations, I achieved a design I liked. It has a 26% weight reduction from the original while staying well within our desired safety factors. While I'm sure further weight reductions are possible, the marginal benefit didn't seem worth the additional effort, which could be better directed elsewhere.
+                FEA in ANSYS Mechanical showed a peak Von Mises stress of 27.57 MPa against A36 steel's 250 MPa yield strength, giving a safety factor of ~9, with a maximum deformation of just 0.004 mm. I used those results to remove material in low-stress areas over a few iterations, achieving a 26% weight reduction while staying well within a safety factor of 3.
             </p>
         </div>
     </div>
-    <p style="text-align: center; font-size: 1.3em; margin-bottom: 100px; font-weight: bold; color: #eee;">
-    Stay tuned for building, testing, and a CFD project coming soon!
-    </p>
+    <div class="project-block alt-background">
+        <div class="image-pair">
+            <img src="ghost_jackshaft_milling.jpg" alt="Jackshaft milling on manual lathe" width="1536" height="2048">
+            <img src="ghost_beam_fitup.png" alt="Structural beam fit up on the frame" width="1440" height="1920">
+        </div>
+        <div class="project-text">
+            <h3 class="block-title">Manufacturing</h3>
+            <p>
+                With the design finalized, it was time to build. I machined 6 unique components on a manual mill and manual lathe, holding tolerances within 0.005" throughout. The motor mounts were cut from ¼" A36 steel plate on our school's waterjet cutter, which kept per-part costs low and made it easy to quickly iterate on the geometry.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-block">
+        <div class="image-pair">
+            <img src="ghost_drivetrain_assembly.png" alt="Drivetrain assembled on the bike" width="695" height="930">
+            <img src="ghost_rolling_test.png" alt="First rolling test of the drivetrain" width="968" height="847">
+        </div>
+        <div class="project-text">
+            <h3 class="block-title">Assembly and Testing</h3>
+            <p>
+                With all components in hand, the drivetrain came together without issue. Total material and COTS component costs came in under $300, and the first rolling test confirmed everything worked as designed: the bike moved under its own power for the first time.
+            </p>
+        </div>
+    </div>
+
     
+    <div style="text-align: center; padding: 30px 20px 60px;">
+        <hr style="border: 1px solid white; width: 80%; margin: 0 auto 24px; opacity: 0.5;">
+        <p style="color: #aaa; margin: 0 0 12px; font-size: 0.95em;">other projects</p>
+        <a href="drone.html" style="color: white; font-size: 1.1em; text-decoration: underline;">FPV Racing Drone</a>
+    </div>
 </body>
 </html>
