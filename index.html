@@ -19,7 +19,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
     <style>
         html {
             scroll-behavior: smooth;
@@ -27,7 +27,7 @@
         body {
             background-color: black;
             color: white;
-            font-family: 'Sora', sans-serif;
+            font-family: 'Roboto Mono', monospace;
             margin: 0;
             padding: 0;
         }
@@ -87,17 +87,19 @@
         .about-text p {
             font-size: calc(1.1em + 0.5pt);
             line-height: 1.5em;
+            margin: 0.6em 0;
         }
-        .about-text li {
-            margin-bottom: 8px;
+        .about-text p:last-child {
+            margin-bottom: 0;
         }
         .about-text a {
-            color: white;
-            text-decoration: underline;
+            color: #00aaff;
+            font-weight: 600;
+            text-underline-offset: 3px;
             transition: color 0.3s ease;
         }
         .about-text a:hover {
-            color: #00aaff;
+            color: white;
         }
 
         /* Projects Section */
@@ -130,15 +132,40 @@
             color: #00aaff;
         }
 
+        /* Side-by-side: span the same 80% as the hr bars */
+        @media (min-width: 901px) {
+            .about {
+                width: 80%;
+                max-width: none;
+                padding-left: 0;
+                padding-right: 0;
+                flex-wrap: nowrap;
+                align-items: stretch;
+            }
+            /* Photo stretches to the text's height, cropping its sides */
+            .about img {
+                flex: 0 1 600px;
+                min-width: 0;
+                object-fit: cover;
+            }
+            .about-text {
+                flex: 1 1 300px;
+                max-width: none;
+            }
+        }
+
         @media (max-width: 900px) {
             .about {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-            .about-text { 
-                max-width: 90%; 
+            .about-text {
+                max-width: 90%;
                 text-align: center;
+            }
+            .about-text p {
+                text-align: left;
             }
         }
 
@@ -180,13 +207,12 @@
         <div class="about-text">
             <h2>About Me</h2>
             <p>Hey I'm Charles! Welcome to my website :)</p>
-            <p>I'm currently:</p>
-            <ul>
-                <li>Studying Aerospace Engineering at UIUC</li>
-                <li>Building flight hardware at <a href="https://www.reflectorbital.com/" target="_blank" rel="noopener noreferrer">Reflect Orbital</a></li>
-                <li>Training to climb V7 and bench 315</li>
-            </ul>
-            <p>I previously built DAC hardware at <a href="https://terraformindustries.com/" target="_blank" rel="noopener noreferrer">Terraform Industries</a>. Next summer I will be interning at SpaceX on the Starship structures team.</p>
+            <p>I'm an Aerospace Engineering student at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a>.</p>
+            <p>In 2025, I led drivetrain and aerodynamic design for my school's MotoStudent team, <a href="https://ghostelectric.web.illinois.edu/index.html" target="_blank" rel="noopener noreferrer">Ghost Electric Motorcycles</a>.</p>
+            <p>From January to August 2026, I built DAC (direct air capture) hardware at <a href="https://terraformindustries.com/" target="_blank" rel="noopener noreferrer">Terraform Industries</a>.</p>
+            <p>I'm currently building flight hardware at <a href="https://www.reflectorbital.com/" target="_blank" rel="noopener noreferrer">Reflect Orbital</a>.</p>
+            <p>In the summer of 2027, I will work on Starship structures at SpaceX.</p>
+            <p>Outside of engineering, I'm training to climb V7 and bench 315.</p>
         </div>
     </div>
 
