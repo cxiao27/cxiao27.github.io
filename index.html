@@ -60,34 +60,33 @@
         }
 
         /* === About Section === */
+        /* Spans the same 80% as the hr bars */
         .about {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            text-align: left;
-            max-width: 1200px;
+            width: 80%;
             margin: 50px auto;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: left;
         }
-
-        .about img {
+        .about-photo {
+            display: block;
             width: 600px;
             max-width: 100%;
+            height: auto;
+            margin: 0 auto 40px auto;
             border-radius: 10px;
             transition: transform 0.3s ease;
-            height: auto;
         }
-        .about img:hover {
+        .about-photo:hover {
             transform: scale(1.05);
         }
-        .about-text {
-            max-width: 500px;
+        .about-text h2 {
+            text-align: center;
         }
         .about-text p {
             font-size: calc(1.1em + 0.5pt);
-            line-height: 1.5em;
-            margin: 0.6em 0;
+            line-height: 1.35em;
+            margin: 1em 0;
         }
         .about-text p:last-child {
             margin-bottom: 0;
@@ -132,39 +131,25 @@
             color: #00aaff;
         }
 
-        /* Side-by-side: span the same 80% as the hr bars */
+        /* Side-by-side: 440px-wide photo, cropped to the text column's height */
         @media (min-width: 901px) {
             .about {
-                width: 80%;
-                max-width: none;
-                padding-left: 0;
-                padding-right: 0;
-                flex-wrap: nowrap;
+                display: flex;
+                gap: 40px;
                 align-items: stretch;
+                justify-content: center;
             }
-            /* Photo stretches to the text's height, cropping its sides */
-            .about img {
-                flex: 0 1 600px;
-                min-width: 0;
+            .about-photo {
+                flex: 0 0 440px;
+                width: 440px;
+                margin: 0;
                 object-fit: cover;
             }
             .about-text {
-                flex: 1 1 300px;
-                max-width: none;
+                flex: 0 1 496px;
+                min-width: 0;
             }
-        }
-
-        @media (max-width: 900px) {
-            .about {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .about-text {
-                max-width: 90%;
-                text-align: center;
-            }
-            .about-text p {
+            .about-text h2 {
                 text-align: left;
             }
         }
@@ -173,7 +158,6 @@
             h1 { font-size: 1.8em; }
             h2 { font-size: 1.5em; }
             .projects a { font-size: 1em; margin: 8px 12px; }
-            .about img { width: 90%; }
         }
     </style>
     <script type="application/ld+json">
@@ -203,7 +187,7 @@
 
     <!-- About Section -->
     <div class="section about">
-        <img src="railway.jpg" alt="Charles Xiao" width="5712" height="4284">
+        <img class="about-photo" src="railway.jpg" alt="Charles Xiao" width="5712" height="4284">
         <div class="about-text">
             <h2>About Me</h2>
             <p>Hey I'm Charles! Welcome to my website :)</p>
