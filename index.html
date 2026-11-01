@@ -16,6 +16,10 @@
     <meta name="twitter:title" content="Charles Xiao">
     <meta name="twitter:description" content="Portfolio of Charles Xiao, an aerospace engineering student at UIUC building flight hardware at Reflect Orbital, with projects in direct air capture, electric motorcycles, and FPV drones.">
     <meta name="twitter:image" content="https://charlesxiao.xyz/railway.jpg">
+    <meta property="og:image:alt" content="Charles Xiao standing on railroad tracks">
+    <meta property="og:site_name" content="Charles Xiao">
+    <meta property="og:locale" content="en_US">
+    <meta name="author" content="Charles Xiao">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,17 +174,52 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Charles Xiao",
-      "url": "https://charlesxiao.xyz",
-      "jobTitle": "Aerospace Engineering Student",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "University of Illinois Urbana-Champaign"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/charles-xiao-engineer/",
-        "https://x.com/charlesxiao_"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://charlesxiao.xyz/#website",
+          "url": "https://charlesxiao.xyz/",
+          "name": "Charles Xiao",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://charlesxiao.xyz/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://charlesxiao.xyz/#person",
+          "name": "Charles Xiao",
+          "url": "https://charlesxiao.xyz/",
+          "image": "https://charlesxiao.xyz/railway.jpg",
+          "jobTitle": "Aerospace Engineering Student",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Reflect Orbital",
+            "url": "https://www.reflectorbital.com/"
+          },
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Illinois Urbana-Champaign",
+            "url": "https://illinois.edu/"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Illinois Urbana-Champaign",
+            "url": "https://illinois.edu/"
+          },
+          "knowsAbout": [
+            "Aerospace engineering",
+            "Mechanical design",
+            "Spacecraft hardware",
+            "Direct air capture",
+            "Electric motorcycle drivetrains",
+            "FPV drones"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/charles-xiao-engineer/",
+            "https://x.com/charlesxiao_"
+          ]
+        }
       ]
     }
     </script>
@@ -194,7 +233,7 @@
 
     <!-- About Section -->
     <div class="section about">
-        <img class="about-photo" src="railway.jpg" alt="Charles Xiao" width="5712" height="4284">
+        <img class="about-photo" src="railway.jpg" alt="Charles Xiao" width="1200" height="900">
         <div class="about-text">
             <h2>About Me</h2>
             <p>Hey I'm Charles! Welcome to my website :)</p>

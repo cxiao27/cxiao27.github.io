@@ -16,6 +16,10 @@
     <meta name="twitter:title" content="Terraform Industries | Charles Xiao">
     <meta name="twitter:description" content="Direct air capture hardware at Terraform Industries: a carbonation reactor outlet, a CO2 capture test campaign, and the deployment of the first calciner powered by direct solar.">
     <meta name="twitter:image" content="https://charlesxiao.xyz/terraform_site_sunset.jpg">
+    <meta property="og:image:alt" content="Terraform's calciner test site at sunset">
+    <meta property="og:site_name" content="Charles Xiao">
+    <meta property="og:locale" content="en_US">
+    <meta name="author" content="Charles Xiao">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -335,16 +339,43 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Terraform Industries",
-      "description": "Direct air capture hardware at Terraform Industries: a carbonation reactor outlet, a CO2 capture test campaign, and the deployment of the first calciner powered by direct solar.",
-      "url": "https://charlesxiao.xyz/terraform.html",
-      "image": "https://charlesxiao.xyz/terraform_site_sunset.jpg",
-      "author": {
-        "@type": "Person",
-        "name": "Charles Xiao",
-        "url": "https://charlesxiao.xyz"
-      }
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "Terraform Industries",
+          "description": "Direct air capture hardware at Terraform Industries: a carbonation reactor outlet, a CO2 capture test campaign, and the deployment of the first calciner powered by direct solar.",
+          "url": "https://charlesxiao.xyz/terraform.html",
+          "image": "https://charlesxiao.xyz/terraform_site_sunset.jpg",
+          "author": {
+            "@id": "https://charlesxiao.xyz/#person",
+            "@type": "Person",
+            "name": "Charles Xiao",
+            "url": "https://charlesxiao.xyz/"
+          },
+          "@id": "https://charlesxiao.xyz/terraform.html#article",
+          "isPartOf": {
+            "@id": "https://charlesxiao.xyz/#website"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://charlesxiao.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Terraform Industries",
+              "item": "https://charlesxiao.xyz/terraform.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -392,15 +423,15 @@
         </div>
         <div class="gallery with-video">
             <figure>
-                <a href="terraform_outlet_open.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_outlet_open.jpg" alt="CAD render of the outlet gate in the open position" width="967" height="691"></a>
+                <a href="terraform_outlet_open.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_outlet_open.jpg" alt="CAD render of the outlet gate in the open position" width="967" height="691" loading="lazy" decoding="async"></a>
                 <figcaption>Outlet gate open</figcaption>
             </figure>
             <figure>
-                <a href="terraform_outlet_closed.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_outlet_closed.jpg" alt="CAD render of the outlet gate in the closed position" width="1000" height="693"></a>
+                <a href="terraform_outlet_closed.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_outlet_closed.jpg" alt="CAD render of the outlet gate in the closed position" width="1000" height="693" loading="lazy" decoding="async"></a>
                 <figcaption>Outlet gate closed</figcaption>
             </figure>
             <figure class="full">
-                <a href="terraform_reactor.jpg" target="_blank" rel="noopener"><img src="terraform_reactor.jpg" alt="Full carbonation reactor" width="2000" height="1500"></a>
+                <a href="terraform_reactor.jpg" target="_blank" rel="noopener"><img src="terraform_reactor.jpg" alt="Full carbonation reactor" width="2000" height="1500" loading="lazy" decoding="async"></a>
                 <figcaption>Full reactor</figcaption>
             </figure>
             <figure class="video">
@@ -421,19 +452,19 @@
         </div>
         <div class="gallery">
             <figure>
-                <a href="terraform_carbonation_graph.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_carbonation_graph.jpg" alt="Carbonation percentage vs time" width="589" height="301"></a>
+                <a href="terraform_carbonation_graph.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_carbonation_graph.jpg" alt="Carbonation percentage vs time" width="589" height="301" loading="lazy" decoding="async"></a>
                 <figcaption>Carbonation percentage vs time</figcaption>
             </figure>
             <figure>
-                <a href="terraform_sorbent.jpg" target="_blank" rel="noopener"><img src="terraform_sorbent.jpg" alt="Calcium hydroxide sorbent flakes" width="421" height="404"></a>
+                <a href="terraform_sorbent.jpg" target="_blank" rel="noopener"><img src="terraform_sorbent.jpg" alt="Calcium hydroxide sorbent flakes" width="421" height="404" loading="lazy" decoding="async"></a>
                 <figcaption>Calcium hydroxide sorbent flakes</figcaption>
             </figure>
             <figure>
-                <a href="terraform_tga.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_tga.jpg" alt="Thermogravimetric analyzer mass drop graph" width="1496" height="713"></a>
+                <a href="terraform_tga.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_tga.jpg" alt="Thermogravimetric analyzer mass drop graph" width="1496" height="713" loading="lazy" decoding="async"></a>
                 <figcaption>Mass drops from the TGA</figcaption>
             </figure>
             <figure>
-                <a href="terraform_carbonation_cycle.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_carbonation_cycle.jpg" alt="Calcium looping cycle diagram" width="901" height="901" style="background-color: #ffff61;"></a>
+                <a href="terraform_carbonation_cycle.jpg" target="_blank" rel="noopener"><img class="fit" src="terraform_carbonation_cycle.jpg" alt="Calcium looping cycle diagram" width="901" height="901" style="background-color: #ffff61;" loading="lazy" decoding="async"></a>
                 <figcaption>Ca(OH)₂ + CO₂ → CaCO₃ + H₂O</figcaption>
             </figure>
         </div>
@@ -454,16 +485,16 @@
         </div>
         <div class="gallery">
             <figure>
-                <a href="terraform_team.jpg" target="_blank" rel="noopener"><img src="terraform_team.jpg" alt="Deployment team at the calciner site" width="1099" height="824"></a>
+                <a href="terraform_team.jpg" target="_blank" rel="noopener"><img src="terraform_team.jpg" alt="Deployment team at the calciner site" width="1099" height="824" loading="lazy" decoding="async"></a>
             </figure>
             <figure>
-                <a href="terraform_calciner_site.jpg" target="_blank" rel="noopener"><img src="terraform_calciner_site.jpg" alt="Solar calciner test site" width="1088" height="815"></a>
+                <a href="terraform_calciner_site.jpg" target="_blank" rel="noopener"><img src="terraform_calciner_site.jpg" alt="Solar calciner test site" width="1088" height="815" loading="lazy" decoding="async"></a>
             </figure>
             <figure>
-                <a href="terraform_calciner.jpg" target="_blank" rel="noopener"><img src="terraform_calciner.jpg" alt="Solar-powered calciner during deployment" width="1234" height="624"></a>
+                <a href="terraform_calciner.jpg" target="_blank" rel="noopener"><img src="terraform_calciner.jpg" alt="Solar-powered calciner during deployment" width="1234" height="624" loading="lazy" decoding="async"></a>
             </figure>
             <figure>
-                <a href="terraform_calciner_telehandler.jpg" target="_blank" rel="noopener"><img src="terraform_calciner_telehandler.jpg" alt="Telehandler at the calciner site" width="688" height="700"></a>
+                <a href="terraform_calciner_telehandler.jpg" target="_blank" rel="noopener"><img src="terraform_calciner_telehandler.jpg" alt="Telehandler at the calciner site" width="688" height="700" loading="lazy" decoding="async"></a>
             </figure>
         </div>
     </div>

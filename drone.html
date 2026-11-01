@@ -10,12 +10,16 @@
     <meta property="og:title" content="FPV Racing Drone Build | Charles Xiao">
     <meta property="og:description" content="Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.">
     <meta property="og:url" content="https://charlesxiao.xyz/drone.html">
-    <meta property="og:image" content="https://charlesxiao.xyz/drone_pic.png">
+    <meta property="og:image" content="https://charlesxiao.xyz/drone_pic.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@charlesxiao_">
     <meta name="twitter:title" content="FPV Racing Drone Build | Charles Xiao">
     <meta name="twitter:description" content="Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.">
-    <meta name="twitter:image" content="https://charlesxiao.xyz/drone_pic.png">
+    <meta name="twitter:image" content="https://charlesxiao.xyz/drone_pic.jpg">
+    <meta property="og:image:alt" content="Completed 5-inch FPV racing drone build">
+    <meta property="og:site_name" content="Charles Xiao">
+    <meta property="og:locale" content="en_US">
+    <meta name="author" content="Charles Xiao">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -195,16 +199,43 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "FPV Racing Drone Build",
-      "description": "Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.",
-      "url": "https://charlesxiao.xyz/drone.html",
-      "image": "https://charlesxiao.xyz/drone_pic.png",
-      "author": {
-        "@type": "Person",
-        "name": "Charles Xiao",
-        "url": "https://charlesxiao.xyz"
-      }
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "FPV Racing Drone Build",
+          "description": "Design and assembly of a 5-inch FPV racing drone, including component selection, electronics soldering, and Betaflight flight controller configuration.",
+          "url": "https://charlesxiao.xyz/drone.html",
+          "image": "https://charlesxiao.xyz/drone_pic.jpg",
+          "author": {
+            "@id": "https://charlesxiao.xyz/#person",
+            "@type": "Person",
+            "name": "Charles Xiao",
+            "url": "https://charlesxiao.xyz/"
+          },
+          "@id": "https://charlesxiao.xyz/drone.html#article",
+          "isPartOf": {
+            "@id": "https://charlesxiao.xyz/#website"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://charlesxiao.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "FPV Racing Drone",
+              "item": "https://charlesxiao.xyz/drone.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -226,7 +257,7 @@
     </h1>
 
     <div class="top-media">
-        <img src="drone_pic.png" alt="Completed 5-inch FPV racing drone build" width="1272" height="955">
+        <img src="drone_pic.jpg" alt="Completed 5-inch FPV racing drone build" width="1272" height="955">
         <video controls playsinline preload="metadata">
             <source src="drone_dvr.mp4" type="video/mp4">
             Your browser does not support the video tag.

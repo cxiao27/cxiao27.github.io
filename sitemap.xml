@@ -1,19 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://charlesxiao.xyz/</loc>
+    <lastmod>2026-11-01</lastmod>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/railway.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://charlesxiao.xyz/terraform.html</loc>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_site_sunset.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_outlet_open.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_outlet_closed.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_reactor.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_carbonation_graph.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_sorbent.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_tga.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_carbonation_cycle.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_team.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_calciner_site.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_calciner.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/terraform_calciner_telehandler.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://charlesxiao.xyz/ghost.html</loc>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/full_bike2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/ghost_final_assembly.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/frame_1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/velo_graph.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/accel_graph.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/initial%20design.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/initial%20design2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/antisquat.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/antisquat-py.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/max_stress_2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/total_deformation.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/two-mounts.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/ghost_jackshaft_milling.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/ghost_beam_fitup.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/ghost_drivetrain_assembly.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/ghost_rolling_test.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://charlesxiao.xyz/drone.html</loc>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://charlesxiao.xyz/drone_pic.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>

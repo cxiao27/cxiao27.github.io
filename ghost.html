@@ -16,6 +16,10 @@
     <meta name="twitter:title" content="Two-Stage Electric Motorcycle Drivetrain | Charles Xiao">
     <meta name="twitter:description" content="Designing and building a two-stage chain drivetrain for an electric motorcycle conversion, including Python dynamics modeling, CAD packaging, and FEA validation in ANSYS.">
     <meta name="twitter:image" content="https://charlesxiao.xyz/full_bike2.png">
+    <meta property="og:image:alt" content="Electric motorcycle with the two-stage drivetrain">
+    <meta property="og:site_name" content="Charles Xiao">
+    <meta property="og:locale" content="en_US">
+    <meta name="author" content="Charles Xiao">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -274,16 +278,43 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Two-Stage Electric Motorcycle Drivetrain",
-      "description": "Designing and building a two-stage chain drivetrain for an electric motorcycle conversion, including Python dynamics modeling, CAD packaging, and FEA validation in ANSYS.",
-      "url": "https://charlesxiao.xyz/ghost.html",
-      "image": "https://charlesxiao.xyz/full_bike2.png",
-      "author": {
-        "@type": "Person",
-        "name": "Charles Xiao",
-        "url": "https://charlesxiao.xyz"
-      }
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "Two-Stage Electric Motorcycle Drivetrain",
+          "description": "Designing and building a two-stage chain drivetrain for an electric motorcycle conversion, including Python dynamics modeling, CAD packaging, and FEA validation in ANSYS.",
+          "url": "https://charlesxiao.xyz/ghost.html",
+          "image": "https://charlesxiao.xyz/full_bike2.png",
+          "author": {
+            "@id": "https://charlesxiao.xyz/#person",
+            "@type": "Person",
+            "name": "Charles Xiao",
+            "url": "https://charlesxiao.xyz/"
+          },
+          "@id": "https://charlesxiao.xyz/ghost.html#article",
+          "isPartOf": {
+            "@id": "https://charlesxiao.xyz/#website"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://charlesxiao.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Ghost Electric Motorcycles: Two Stage Drivetrain",
+              "item": "https://charlesxiao.xyz/ghost.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -310,13 +341,13 @@
     <!-- Aligned Image Row -->
     <div class="image-row">
         <img src="full_bike2.png" alt="Full bike build" width="1144" height="688">
-        <img src="ghost_final_assembly.png" alt="Final assembly of the drivetrain" width="842" height="639">
+        <img src="ghost_final_assembly.jpg" alt="Final assembly of the drivetrain" width="842" height="639">
     </div>
 
 
     <!-- Project Blocks -->
     <div class="project-block">
-        <img src="frame_1.png" alt="ZX-6R Frame" width="812" height="636">
+        <img src="frame_1.jpg" alt="ZX-6R Frame" width="812" height="636" loading="lazy" decoding="async">
         <div class="project-text">
             <h3 class="block-title">Objective</h3>
             <p>
@@ -327,8 +358,8 @@
 
    <div class="project-block stacked-images alt-background">
         <div class="image-column">
-            <img src="velo_graph.png" alt="Velocity vs Time" width="462" height="371">
-            <img src="accel_graph.png" alt="Acceleration vs Time" width="461" height="361">
+            <img src="velo_graph.png" alt="Velocity vs Time" width="462" height="371" loading="lazy" decoding="async">
+            <img src="accel_graph.png" alt="Acceleration vs Time" width="461" height="361" loading="lazy" decoding="async">
         </div>
         <div class="project-text">
             <h3 class="block-title">Modeling Drivetrain Dynamics for Gear Ratio Selection</h3>
@@ -340,8 +371,8 @@
 
     <div class="project-block stacked-images">
         <div class="image-column">
-            <img src="initial design.png" alt="Initial drivetrain CAD layout, side view" width="964" height="655">
-            <img src="initial design2.png" alt="Revised drivetrain CAD layout, side view" width="1165" height="657">
+            <img src="initial design.png" alt="Initial drivetrain CAD layout, side view" width="964" height="655" loading="lazy" decoding="async">
+            <img src="initial design2.png" alt="Revised drivetrain CAD layout, side view" width="1165" height="657" loading="lazy" decoding="async">
         </div>
         <div class="project-text">
             <h3 class="block-title">Drivetrain Design and Integration</h3>
@@ -353,8 +384,8 @@
 
     <div class="project-block stacked-images alt-background">
          <div class="image-column">
-            <img src="antisquat.png" alt="Anti-squat geometry diagram for jackshaft placement" width="609" height="417">
-            <img src="antisquat-py.png" alt="Anti-squat calculations" width="745" height="752">
+            <img src="antisquat.png" alt="Anti-squat geometry diagram for jackshaft placement" width="609" height="417" loading="lazy" decoding="async">
+            <img src="antisquat-py.png" alt="Anti-squat calculations" width="745" height="752" loading="lazy" decoding="async">
         </div>
         
         <div class="project-text">
@@ -367,9 +398,9 @@
 
         <div class="project-block stacked-images">
         <div class="image-column">
-            <img src="max_stress_2.png" alt="Von Mises stress distribution from ANSYS FEA simulation" width="1165" height="569">
-            <img src="total_deformation.png" alt="Total Deformation" width="1425" height="591">
-            <img src="two-mounts.png" alt="Motor mount comparison before and after topology optimization" width="947" height="611">
+            <img src="max_stress_2.png" alt="Von Mises stress distribution from ANSYS FEA simulation" width="1165" height="569" loading="lazy" decoding="async">
+            <img src="total_deformation.png" alt="Total Deformation" width="1425" height="591" loading="lazy" decoding="async">
+            <img src="two-mounts.png" alt="Motor mount comparison before and after topology optimization" width="947" height="611" loading="lazy" decoding="async">
         </div>
         <div class="project-text">
             <h3 class="block-title">Motor Mount FEA</h3>
@@ -380,8 +411,8 @@
     </div>
     <div class="project-block alt-background">
         <div class="image-pair">
-            <img src="ghost_jackshaft_milling.jpg" alt="Jackshaft milling on manual lathe" width="1536" height="2048">
-            <img src="ghost_beam_fitup.png" alt="Structural beam fit up on the frame" width="1440" height="1920">
+            <img src="ghost_jackshaft_milling.jpg" alt="Jackshaft milling on manual lathe" width="1536" height="2048" loading="lazy" decoding="async">
+            <img src="ghost_beam_fitup.jpg" alt="Structural beam fit up on the frame" width="1200" height="1600" loading="lazy" decoding="async">
         </div>
         <div class="project-text">
             <h3 class="block-title">Manufacturing</h3>
@@ -393,8 +424,8 @@
 
     <div class="project-block">
         <div class="image-pair">
-            <img src="ghost_drivetrain_assembly.png" alt="Drivetrain assembled on the bike" width="695" height="930">
-            <img src="ghost_rolling_test.png" alt="First rolling test of the drivetrain" width="968" height="847">
+            <img src="ghost_drivetrain_assembly.jpg" alt="Drivetrain assembled on the bike" width="695" height="930" loading="lazy" decoding="async">
+            <img src="ghost_rolling_test.jpg" alt="First rolling test of the drivetrain" width="968" height="847" loading="lazy" decoding="async">
         </div>
         <div class="project-text">
             <h3 class="block-title">Assembly and Testing</h3>
